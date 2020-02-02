@@ -453,6 +453,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 333803785}
+  - component: {fileID: 333803786}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -482,6 +483,38 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &333803786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 333803784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c76237d7d4d1f704d861eeb88b647fad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogues:
+  - {fileID: 1147226451}
+  - {fileID: 1098700210}
+  - {fileID: 2075052695}
+  - {fileID: 612791410}
+  - {fileID: 79808432}
+  - {fileID: 1976409371}
+  - {fileID: 798288389}
+  - {fileID: 2112806555}
+  - {fileID: 213214928}
+  voiceLines:
+  - {fileID: 1974271571}
+  - {fileID: 1016606443}
+  - {fileID: 1520394100}
+  - {fileID: 1863980645}
+  - {fileID: 1196278547}
+  - {fileID: 1484474560}
+  - {fileID: 1010199500}
+  timer: 2
+  secondTimer: 3
 --- !u!1 &458726784
 GameObject:
   m_ObjectHideFlags: 0
@@ -1045,7 +1078,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: b72ad1e848fe410428b5be5078d34145, type: 3}
+  m_audioClip: {fileID: 8300000, guid: feec9664cf340f14d97b78258a7b2308, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1172,7 +1205,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: b72ad1e848fe410428b5be5078d34145, type: 3}
+  m_audioClip: {fileID: 8300000, guid: edd8b5a059223f84092ac9d3ab3e2b52, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1344,6 +1377,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1072056006}
+  - component: {fileID: 1072056007}
   m_Layer: 0
   m_Name: BGMusic
   m_TagString: Untagged
@@ -1365,6 +1399,102 @@ Transform:
   m_Father: {fileID: 333803785}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1072056007
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1072056005}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 5b3f09a5204ed884aa6d9d13ed2ea6c2, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.15
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1098700210
 GameObject:
   m_ObjectHideFlags: 0
@@ -1480,7 +1610,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: b72ad1e848fe410428b5be5078d34145, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 16aaca45dec368e4db87556d1b44295a, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1600,8 +1730,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 57.5, y: -161.00002}
-  m_SizeDelta: {x: 583.1, y: 74.7}
+  m_AnchoredPosition: {x: 26.7, y: -161.00002}
+  m_SizeDelta: {x: 636.6, y: 74.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1313007856
 MonoBehaviour:
@@ -1634,7 +1764,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: You didn't have to go through trouble of getting me all of this stuff.
+  m_Text: (After talking it through, Nate and Cindy were once again happy and everything
+    was solved.)
 --- !u!222 &1313007857
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1838,7 +1969,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: b72ad1e848fe410428b5be5078d34145, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 4c4dd777a9161154083d2302c19cf0a7, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1965,9 +2096,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: b72ad1e848fe410428b5be5078d34145, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 71081c775ec48e94a8dbb7443fd28f62, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.8
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -2468,7 +2599,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: b72ad1e848fe410428b5be5078d34145, type: 3}
+  m_audioClip: {fileID: 8300000, guid: b15ca968c25e0274b94ff5531afcc27c, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -2749,7 +2880,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: b72ad1e848fe410428b5be5078d34145, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 0d502d83d0a6e874790ec34c9469e8df, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -2940,7 +3071,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: All I ever wanted to do is just talk to you.
+  m_Text: All I ever wanted to do was just talk.
 --- !u!222 &2032766142
 CanvasRenderer:
   m_ObjectHideFlags: 0
