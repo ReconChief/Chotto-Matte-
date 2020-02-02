@@ -18,12 +18,15 @@ public class Player : MonoBehaviour {
 	[SerializeField] private CinemachineVirtualCamera mainCam;
 
 	public static UnityAction<int> setItemCounter;
-
+	private bool hit;
+	private bool dead;
 	public int Animations { get => animations; set { animations = value;anim.SetInteger("Animations",animations); } }
 
 	public int Items { get => items; set { items = value;if (setItemCounter != null) { setItemCounter(items); } } }
 
-	public int Health { get => health; set { health = Mathf.Clamp(value , 0,10);if (health == 0) { } } }
+	public int Health { get => health; set { health = Mathf.Clamp(value , 0,10);Debug.Log(health); if (health == 0) { dead = true; } } }
+
+	public bool Hit { get => hit; set => hit = value; }
 
 	// Start is called before the first frame update
 	public static Player GetPlayer() => instance;
@@ -34,6 +37,7 @@ public class Player : MonoBehaviour {
 			instance = this;
 		}
 		StoreDoors.goInStore += GoIntoStore;
+		EnemyHitBox.hit += OnHit;
 		anim=GetComponent<Animator>();
 		nav = GetComponent<NavMeshAgent>();
 	}
@@ -105,6 +109,10 @@ public class Player : MonoBehaviour {
 		if (Vector3.SqrMagnitude(displacement) > 0.01f) {
 			transform.forward = displacement;
 		}
+	}
+	private void OnHit() {
+		Health--;
+		Hit= true;
 	}
 	private void KO() {
 		StartCoroutine(WaitToRespawn());
