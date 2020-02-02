@@ -13,6 +13,7 @@ public class GameController : MonoBehaviour {
 	// Start is called before the first frame update
 	private void Awake() {
 		CindyGate.winner += LoadWinScene;
+		Player.ded += LoadLoseScene;
 	}
 	void Start() {
 		StartCoroutine(TimeBs());

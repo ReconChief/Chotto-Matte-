@@ -6,11 +6,12 @@ public class UIManager : MonoBehaviour
 {
 	[SerializeField] private Text timer;
 	[SerializeField] private Text itemCounter;
-	
+	[SerializeField] private Text healthText;
 
 	private void Awake() {
 		GameController.setTimer += SetTimer;
 		Player.setItemCounter += SetItemCounter;
+		Player.setHealth += SetHealth;
 	}
 	// Start is called before the first frame update
 	void Start()
@@ -27,6 +28,9 @@ public class UIManager : MonoBehaviour
 		timer.text = (time/60).ToString()+" : "+(time%60).ToString();
 	}
 	private void SetItemCounter(int items) {
-		itemCounter.text = items.ToString();
+		itemCounter.text = "Items: "+items.ToString();
+	}
+	private void SetHealth(int health) {
+		healthText.text = "Health: "+health.ToString();
 	}
 }

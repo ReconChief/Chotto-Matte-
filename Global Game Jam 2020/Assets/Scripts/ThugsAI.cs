@@ -21,7 +21,7 @@ public class ThugsAI : MonoBehaviour {
 
 	public bool Attacking { get => attacking; set { attacking = value;anim.SetBool("Attacking",attacking); } }
 	public bool Hit { get => hit; set { hit = value; anim.SetBool("Hit", hit); } }
-	public bool Dead { get => dead; set { dead = value;anim.SetBool("Dead",dead); } }
+	public bool Dead { get => dead; set { dead = value;anim.SetBool("Dead",dead);if (dead) Debug.Log("ded"); } }
 	public bool Attack { get => attack; set { attack = value;anim.SetBool("Attack",attack); } }
 
 	private Coroutine attackCoroutine;
