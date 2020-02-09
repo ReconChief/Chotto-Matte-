@@ -2,9 +2,13 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - CindyGate
+    - CommandInput
     - EnemyHitBox
     - EnemyHitBoxBehavior
     - GameController
+    - HitBox
+    - HitBoxBehavior
+    - Idle
     - IntroVoiceOvers
     - LoseVoiceLines
     - Player
@@ -55,6 +59,7 @@ ScriptsOnlyBuild:
     - UnityEngine.EventSystems.StandaloneInputModule
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
+    - UnityEngine.UI.Image
     - UnityEngine.UI.RawImage
     - UnityEngine.UI.Text
   sceneClasses:
@@ -120,49 +125,59 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9940}
     - Class: 114
+      Script: {instanceID: 9988}
+    - Class: 114
       Script: {instanceID: 10008}
     - Class: 114
       Script: {instanceID: 10126}
     - Class: 114
-      Script: {instanceID: 10390}
+      Script: {instanceID: 10288}
     - Class: 114
-      Script: {instanceID: 10442}
+      Script: {instanceID: 10392}
     - Class: 114
-      Script: {instanceID: 10486}
+      Script: {instanceID: 10444}
     - Class: 114
-      Script: {instanceID: 10694}
+      Script: {instanceID: 10488}
     - Class: 114
-      Script: {instanceID: 10752}
+      Script: {instanceID: 10696}
     - Class: 114
       Script: {instanceID: 10754}
     - Class: 114
-      Script: {instanceID: 10784}
+      Script: {instanceID: 10756}
     - Class: 114
-      Script: {instanceID: 10796}
+      Script: {instanceID: 10786}
     - Class: 114
-      Script: {instanceID: 10800}
+      Script: {instanceID: 10798}
     - Class: 114
-      Script: {instanceID: 10984}
+      Script: {instanceID: 10802}
     - Class: 114
-      Script: {instanceID: 11042}
+      Script: {instanceID: 10924}
     - Class: 114
-      Script: {instanceID: 11260}
+      Script: {instanceID: 10988}
     - Class: 114
-      Script: {instanceID: 11450}
+      Script: {instanceID: 11046}
     - Class: 114
-      Script: {instanceID: 11492}
+      Script: {instanceID: 11264}
     - Class: 114
-      Script: {instanceID: 11576}
+      Script: {instanceID: 11454}
     - Class: 114
-      Script: {instanceID: 11770}
+      Script: {instanceID: 11496}
     - Class: 114
-      Script: {instanceID: 11822}
+      Script: {instanceID: 11580}
     - Class: 114
-      Script: {instanceID: 11874}
+      Script: {instanceID: 11774}
     - Class: 114
-      Script: {instanceID: 11898}
+      Script: {instanceID: 11782}
     - Class: 114
-      Script: {instanceID: 11916}
+      Script: {instanceID: 11828}
+    - Class: 114
+      Script: {instanceID: 11880}
+    - Class: 114
+      Script: {instanceID: 11904}
+    - Class: 114
+      Script: {instanceID: 11922}
+    - Class: 114
+      Script: {instanceID: 11964}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -174,6 +189,8 @@ ScriptsOnlyBuild:
     - Class: 195
       Script: {instanceID: 0}
     - Class: 208
+      Script: {instanceID: 0}
+    - Class: 213
       Script: {instanceID: 0}
     - Class: 222
       Script: {instanceID: 0}
@@ -225,21 +242,21 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10126}
     - Class: 114
-      Script: {instanceID: 10442}
+      Script: {instanceID: 10444}
     - Class: 114
-      Script: {instanceID: 10754}
+      Script: {instanceID: 10756}
     - Class: 114
-      Script: {instanceID: 10800}
+      Script: {instanceID: 10802}
     - Class: 114
-      Script: {instanceID: 10848}
+      Script: {instanceID: 10850}
     - Class: 114
-      Script: {instanceID: 10932}
+      Script: {instanceID: 10936}
     - Class: 114
-      Script: {instanceID: 11492}
+      Script: {instanceID: 11496}
     - Class: 114
-      Script: {instanceID: 11770}
+      Script: {instanceID: 11774}
     - Class: 114
-      Script: {instanceID: 11898}
+      Script: {instanceID: 11904}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -282,11 +299,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9940}
     - Class: 114
-      Script: {instanceID: 10932}
+      Script: {instanceID: 10936}
     - Class: 114
-      Script: {instanceID: 11218}
+      Script: {instanceID: 11222}
     - Class: 114
-      Script: {instanceID: 11492}
+      Script: {instanceID: 11496}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -329,11 +346,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9940}
     - Class: 114
-      Script: {instanceID: 10786}
+      Script: {instanceID: 10788}
     - Class: 114
-      Script: {instanceID: 10932}
+      Script: {instanceID: 10936}
     - Class: 114
-      Script: {instanceID: 11492}
+      Script: {instanceID: 11496}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -607,6 +624,12 @@ ScriptsOnlyBuild:
     className: TMP_SubMeshUI
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: HitBox
+  - hash:
+      serializedVersion: 2
       Hash: 5ab533713adae59372fb3e10a585c186
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -643,7 +666,7 @@ ScriptsOnlyBuild:
     className: NoiseSettings
   - hash:
       serializedVersion: 2
-      Hash: 2cbd9ad4bfc7fb7e3fde86ebcf9f62de
+      Hash: 536ec03cba78f99fae3adbe0c0beeb47
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: UIManager
@@ -839,6 +862,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Button
+  - hash:
+      serializedVersion: 2
+      Hash: c3c66668a87958477d91caf21cbb112e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: HitBoxBehavior
   - hash:
       serializedVersion: 2
       Hash: feb9a5a121d15fa3654d4e50a5233045
@@ -1051,7 +1080,7 @@ ScriptsOnlyBuild:
     className: CinemachineHardLookAt
   - hash:
       serializedVersion: 2
-      Hash: 3f970a001c36c45cff78489d2886a27b
+      Hash: cde31f2351d1ee91865c889738fa5550
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Player
@@ -1073,6 +1102,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Postprocessing.Runtime.dll
     namespaceName: UnityEngine.Rendering.PostProcessing
     className: PostProcessVolume
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CommandInput
   - hash:
       serializedVersion: 2
       Hash: d0987ce3e9092dbe0fa30d73f333fffa
@@ -1213,6 +1248,12 @@ ScriptsOnlyBuild:
     className: Slider
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Idle
+  - hash:
+      serializedVersion: 2
       Hash: 0fd6822f6177297bd0eb4d83cc7a9030
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -1229,4 +1270,5 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Game.unity
   - Assets/Scenes/WinScene.unity
   - Assets/Scenes/LoseScene.unity
-  playerPath: C:/Users/Char13s/Desktop/UnityProjects/Build/Global Game Jam 2020.exe
+  playerPath: D:/GitHub/ChottoMatte/Chotto-Matte-/Global Game Jam 2020/Builds/Global
+    Game Jam 2020.exe
